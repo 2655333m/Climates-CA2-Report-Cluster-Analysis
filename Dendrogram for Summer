@@ -97,3 +97,38 @@ Via the dendragram, we can identift 4 clusters.
 We now move onto plotting these cluster in a cluster map
 of the extratropical northern hemisphere
 """
+
+# Create an empty grid for clusters (lat x lon)
+cluster_map = np.full((n_lat, n_lon), np.nan)
+
+# Fill grid ONLY where data was not missing
+clean_idx = np.where(missing_data)[0]
+
+for k, idx in enumerate(clean_idx):
+    i = idx // n_lon
+    j = idx % n_lon
+    cluster_map[i, j] = labels[k]
+
+# Plot map
+
+plt.figure(figsize=(12, 6))
+ax = plt.axes(projection=ccrs.PlateCarree())
+
+# Add coastlines + land
+ax.coastlines(resolution='110m', linewidth=1)
+ax.add_feature(cfeature.LAND, facecolor='lightgray', zorder=0)
+ax.add_feature(cfeature.BORDERS, linewidth=0.5)
+
+# Focus on extratropical NH (30–60°N)
+ax.set_extent([lon.min(), lon.max(), 30, 60], crs=ccrs.PlateCarree())
+
+# Plot the cluster map
+plt.pcolormesh(
+    lon, lat[ENH], cluster_map,
+    transform=ccrs.PlateCarree(),
+    shading='nearest'
+)
+
+plt.title("Cluster Map – Extratropical NH (summer Means)")
+plt.colorbar(label="Cluster")
+plt.show()
