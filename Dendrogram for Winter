@@ -115,9 +115,7 @@ for k, idx in enumerate(clean_idx):
     j = idx % n_lon
     cluster_map[i, j] = labels[k]
 
-# -------------------------
-#     Plot map
-# -------------------------
+# Plot map
 
 plt.figure(figsize=(12, 6))
 ax = plt.axes(projection=ccrs.PlateCarree())
