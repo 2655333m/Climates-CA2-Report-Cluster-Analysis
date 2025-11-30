@@ -3,7 +3,7 @@
 """
 Created on Tue Nov 25 16:45:49 2025
 
-@author: andrewmilne
+@author: ****
 """
 
 import netCDF4 as nc  # extracting the data
@@ -18,7 +18,7 @@ from sklearn.cluster import KMeans # calcualte k-means
 
 
 # Set working directory 
-cwd = '/Users/andrewmilne/Desktop/GeoScience/Masters/Climatology/Assesments/CA2/Data'
+cwd = '/*****/CA2/Data'
 
 # Load datasets
 data_v10 = nc.Dataset('/Users/andrewmilne/Desktop/GeoScience/Masters/Climatology/Assesments/CA2/Data/v10.nc', 'r')
