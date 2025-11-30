@@ -3,7 +3,7 @@
 """
 Created on Wed Nov 26 15:32:44 2025
 
-@author: andrewmilne
+@author: ******
 """
 import netCDF4 as nc  # extracting the data
 from netCDF4 import num2date  # extract time varible for seasons
@@ -16,12 +16,12 @@ import cartopy.feature as cfeature  # mapping the clusters
 from sklearn.cluster import KMeans # calcualte k-means
 
 # Set working directory 
-cwd = '/Users/andrewmilne/Desktop/GeoScience/Masters/Climatology/Assesments/CA2/Data'
+cwd = '/Users/*******/CA2/Data'
 
 # Load datasets
-data_v10 = nc.Dataset('/Users/andrewmilne/Desktop/GeoScience/Masters/Climatology/Assesments/CA2/Data/v10.nc', 'r')
-data_u10 = nc.Dataset('/Users/andrewmilne/Desktop/GeoScience/Masters/Climatology/Assesments/CA2/Data/u10.nc', 'r')
-data_t2m = nc.Dataset('/Users/andrewmilne/Desktop/GeoScience/Masters/Climatology/Assesments/CA2/Data/t2m.nc', 'r')
+data_v10 = nc.Dataset('/Users/********/CA2/Data/v10.nc', 'r')
+data_u10 = nc.Dataset('/Users/******/CA2/Data/u10.nc', 'r')
+data_t2m = nc.Dataset('/Users/*******/CA2/Data/t2m.nc', 'r')
 
 # Extract lat/lon/time 
 lat = data_v10.variables['latitude'][:]  
