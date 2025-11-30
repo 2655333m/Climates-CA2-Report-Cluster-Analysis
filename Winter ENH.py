@@ -3,7 +3,7 @@
 """
 Created on Tue Nov 25 16:42:56 2025
 
-@author: andrewmilne
+@author: ******
 """
 
 #!/usr/bin/env python3
@@ -26,7 +26,7 @@ from sklearn.cluster import KMeans # calcualte k-means
 
 
 # Set working directory 
-cwd = '/Users/andrewmilne/Desktop/GeoScience/Masters/Climatology/Assesments/CA2/Data'
+cwd = '/********/CA2/Data'
 
 # Load datasets
 data_v10 = nc.Dataset('/Users/andrewmilne/Desktop/GeoScience/Masters/Climatology/Assesments/CA2/Data/v10.nc', 'r')
